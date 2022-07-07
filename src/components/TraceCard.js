@@ -8,7 +8,7 @@ import SpanCard from './SpanCard';
 
 export default function TraceCard(props) {
     let spanCards = [];
-    props.spans.forEach(span => spanCards.push(<SpanCard key={span.ID} spanId={span.ID} parentId={span.ParentID} name={span.Name} logs={span.Logs} />));
+    props.spans.forEach(span => spanCards.push(<SpanCard key={span.ID} spanId={span.ID} parentId={span.ParentID} name={span.Name} time={span.Time} logs={span.Logs} />));
 
     return (
         <Accordion sx={{

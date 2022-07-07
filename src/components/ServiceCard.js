@@ -17,6 +17,7 @@ export default function ServiceCard(props) {
     }, []);
 
     let traceCards = [];
+
     if (traces) {
         Object.keys(traces).forEach(traceId => 
             traceCards.push(<TraceCard key={traceId} traceId={traceId} spans={traces[traceId]} />)
